@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Oauth Buttons</title>
+
+  <script type="module" src="/build/auth-button.esm.js"></script>
+  <script nomodule src="/build/auth-button.js"></script>
+  <style>
+    /* example base start */
+    section {
+      max-width: 300px;
+      padding: 1rem;
+      margin: auto;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid #000;
+      margin: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        color: #fff;
+        background-color: #272727;
+      }
+
+      hr {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    /* example base end */
+
+    .google-blue {
+      --auth-text-color: #fff;
+      --auth-background-color: #4285f4;
+    }
+
+    .fb {
+      --auth-text-color: #fff;
+      --auth-background-color: #4267b2;
+      --auth-icon-background-color: transparent;
+    }
+
+    .twitter {
+      --auth-text-color: #fff;
+      --auth-background-color: #17a2f2;
+    }
+
+    .spotify {
+      --auth-text-color: #fff;
+      --auth-background-color: #1db954;
+    }
+
+    .github {
+      --auth-icon-size: 32px;
+      --auth-text-color: #fff;
+      --auth-background-color: #1a1414;
+    }
+
+    .steam {
+      --auth-text-color: #fff;
+      --auth-background-color: #221e1f;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    Google
+    <auth-button class="google-blue">
+      <svg slot="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48"
+        class="abcRioButtonSvg">
+        <g>
+          <path fill="#EA4335"
+            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+          </path>
+          <path fill="#4285F4"
+            d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+          </path>
+          <path fill="#FBBC05"
+            d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+          </path>
+          <path fill="#34A853"
+            d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+          </path>
+          <path fill="none" d="M0 0h48v48H0z"></path>
+        </g>
+      </svg>
+      Sign In with Google
+    </auth-button>
+
+    <hr />
+
+    Facebook
+    <auth-button class="fb" icon-src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/szGrb_tkxMW.png">
+      Sign In with Facebook
+    </auth-button>
+
+    <hr />
+
+    Twitter
+    <auth-button class="twitter" icon-src="https://upload.wikimedia.org/wikipedia/de/9/9f/Twitter_bird_logo_2012.svg">
+      Sign In with Twitter
+    </auth-button>
+
+    <hr />
+
+    Spotify
+    <auth-button class="spotify">
+      <svg slot="icon" xmlns="http://www.w3.org/2000/svg" class="abcRioButtonSvg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 18 18" version="1.1">
+        <defs>
+          <clipPath id="clip1">
+            <path d="M 0 0 L 17.980469 0 L 17.980469 17.980469 L 0 17.980469 Z M 0 0 " />
+          </clipPath>
+        </defs>
+        <g id="surface1">
+          <g clip-path="url(#clip1)" clip-rule="nonzero">
+            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(11.764706%,84.313725%,37.647059%);fill-opacity:1;"
+              d="M 14.226562 7.984375 C 11.371094 6.289062 6.664062 6.132812 3.941406 6.960938 C 3.503906 7.09375 3.039062 6.847656 2.90625 6.410156 C 2.777344 5.972656 3.023438 5.507812 3.460938 5.375 C 6.585938 4.425781 11.785156 4.609375 15.070312 6.558594 C 15.464844 6.792969 15.59375 7.300781 15.363281 7.695312 C 15.128906 8.089844 14.621094 8.21875 14.226562 7.984375 M 14.132812 10.496094 C 13.933594 10.820312 13.507812 10.921875 13.183594 10.722656 C 10.804688 9.261719 7.175781 8.835938 4.359375 9.691406 C 3.996094 9.800781 3.609375 9.59375 3.5 9.230469 C 3.390625 8.867188 3.59375 8.480469 3.960938 8.371094 C 7.175781 7.394531 11.171875 7.867188 13.90625 9.546875 C 14.230469 9.746094 14.332031 10.171875 14.132812 10.496094 M 13.050781 12.90625 C 12.890625 13.167969 12.550781 13.25 12.292969 13.089844 C 10.210938 11.820312 7.59375 11.53125 4.511719 12.234375 C 4.214844 12.304688 3.921875 12.117188 3.851562 11.820312 C 3.785156 11.523438 3.96875 11.226562 4.265625 11.160156 C 7.640625 10.390625 10.53125 10.722656 12.867188 12.148438 C 13.128906 12.304688 13.207031 12.644531 13.050781 12.90625 M 8.988281 0.136719 C 4.101562 0.136719 0.136719 4.097656 0.136719 8.988281 C 0.136719 13.878906 4.101562 17.84375 8.988281 17.84375 C 13.878906 17.84375 17.84375 13.878906 17.84375 8.988281 C 17.84375 4.097656 13.878906 0.136719 8.988281 0.136719 " />
+          </g>
+        </g>
+      </svg>
+      Sign In with Spotify
+    </auth-button>
+
+    <hr />
+
+    github with larger icon
+    <auth-button class="github">
+      <div slot="icon">
+        <svg class="octicon octicon-mark-github v-align-middle" version="1.1" width="32" height="32" viewBox="0 0 16 16"
+          aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </div>
+      Sign In with Spotify
+    </auth-button>
+
+  </section>
+</body>
+
+</html>

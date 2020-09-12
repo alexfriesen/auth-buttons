@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+button {
+  border: 1px solid var(--auth-border-color, transparent);
+  border-radius: var(--auth-border-size, 2px);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+  background-color: var(--auth-background-color, #fff);
+  background-image: none;
+  color: var(--auth-text-color, #262626);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0;
+}
+button:hover,
+button:active {
+  /* background-color: #4285f4; */
+  filter: brightness(85%);
+}
+
+.icon {
+  background-color: var(--auth-icon-background-color, #fff);
+  border-radius: var(--auth-border-size, 2px);
+  float: left;
+  padding: calc((var(--auth-height, 50px) - var(--auth-icon-size, 18px) - (var(--auth-border-size, 2px)) * 2) / 2);
+}
+
+.icon img,
+.icon * {
+  max-width: var(--auth-icon-size, 18px);
+  max-height: var(--auth-icon-size, 18px);
+  height: var(--auth-icon-size, 18px);
+}
+
+.label {
+  font-family: Roboto, arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.21px;
+
+  margin-left: 6px;
+  margin-right: 6px;
+  line-height: calc(var(--auth-height, 50px) - var(--auth-border-size, 2px));
+}
