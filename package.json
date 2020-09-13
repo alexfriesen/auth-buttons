@@ -1,7 +1,19 @@
 {
   "name": "auth-button",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Auth Button Web Components",
+  "keywords": [
+    "auth",
+    "oauth",
+    "button",
+    "web components"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "git@github.com:alexfriesen/auth-buttons.git",
+    "url": "https://github.com/alexfriesen/auth-buttons"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -24,5 +36,11 @@
   "dependencies": {
     "@stencil/core": "^2.0.1"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@types/jest": "^26.0.12",
+    "@types/puppeteer": "^3.0.1",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "puppeteer": "^5.2.1"
+  }
 }
